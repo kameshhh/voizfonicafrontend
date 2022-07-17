@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VOIZFONICA PROJECT</title>
+</head>
+<body >
+    <!-- <p>navbar works!</p> -->
+    <div class="card">
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color:gold;" >
+            <div class="container-fluid">
+                <a> <img src="../../../../assets/images/4.jpg" style="height: 55%; width: 70%;"></a>
+                <a class="navbar-brand ms-auto" style="font-size: xx-large;font-weight: bolder; font-family:'Times New Roman', Times, serif; font-stretch:extra-expanded;"
+                 href="#">VOIZFONICA</a>                
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto " style="font-size:  xx-large; font-family: 'Times New Roman', Times, serif;"  >
+                        <!-- <ul class="nav nav-pills nav-fills"> -->
+                        <li class="nav-item"  >
+                            <!-- <a class="nav-link px-4"  aria-current="page" href="#">Home</a> -->
+                            <a class="btn btn-primary btn-lg px-4"  routerLink="/" role="button">HOME</a>
+                        </li>
+                      <!-- </ul>    -->
+                        <li class="nav-item">
+                            <a class="btn btn-success btn-lg px-4" routerLink="/plans" *ngIf="loginStatus">Plans </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-danger btn-lg dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"  *ngIf="!loginStatus">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item"  aria-current="page"  routerLink="/userlogin"style="font-size: x-large;" >Existing User Login</a></li>
+                                <li><a class="dropdown-item"  style="font-size: x-large;" routerLink="/signup">New User Sign-up</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class= "dropdown-item"  style="font-size: x-large;"   routerLink="/Admin Login" >  Admin Login</a></li>
+                            </ul>
+                            <a  class="btn btn-danger btn-lg px-4" aria-current="page" routerLink="/logout" *ngIf="loginStatus">logout</a>
+                            
+                        </li>
+                        
+            
+                        <li class="nav-item">
+                            <a class="btn btn-info btn-lg px-4  " routerLink="/aboutus">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            
+                            <a class="btn btn-warning btn-lg px-4  "  routerLink="/custform">Contact Us</a>                          
+                            
+                        </li>                   
+                        
+                    </ul>      
+                            
+                </div>
+            </div>
+        </nav>
+        </div>
+      </body>
+      </html>
+      
+      
+
+<!-- Carousel page code line 59-85 -->
+    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../../../assets/images/1.jpg" class="d-block w-100" style="height: 41.90rem; width: 18rem; " alt="...">
+
+      </div>
+      <div class="carousel-item">
+        <img src="../../../../assets/images/2.jpg" class="d-block w-100" style="height: 41.90rem; width:18rem;"  alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../../../../assets/images/3.jpg" class="d-block w-100"  style="height: 41.90rem; width: 18rem;" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

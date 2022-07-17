@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body style="display: flex; align-items: center; justify-content: center;">
+<div class="container py-2 px-5 h-100" >
+    <div class="row d-flex justify-content-center align-items-center h-200">
+        <div class="col-16 col-md-15 col-lg-10 col-xl-8">
+            <div class="card " style="background-color: aquamarine;" >
+                <div class="card-body p-4 text-center">
+                    <div class="mb-md-8 mt-md-4 pb-4">
+                        
+                        <h3 class="font-size mb-2" style="font-weight: bolder;color: darkorange; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-stretch: extra-condensed;" > <u> CUSTOMER FORM </u></h3> <br>   
+                        
+                        <form (ngSubmit)="contactus()">
+                        <div class="mb-3 row">
+                            <label for="input-group-text" class="col-lg-3 col-form-label" style="font-size:  larger; font-family: Georgia, 'Times New Roman', Times, serif;">NAME</label>
+                            <div class="col-lg-8">
+                              <input type="text"  [(ngModel)]="complains.name" name="name" class="form-control" placeholder="Enter your name">
+                            </div> 
+                          </div>
+                          <br>
+                          
+                        
+                        <div class="mb-5 row">
+                            <label for="inputPassword" class="col-lg-3 col-form-label" style="font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;">EMAIL-ID</label>
+                            <div class="col-lg-8">
+                              <input type="email" [(ngModel)]="complains.email" name="email" class="form-control" id="email-id" placeholder="Enter your valid email id">
+                            </div>
+                          </div>
+                          <div class="mb-2 row">
+                            <label for="inputPassword" class="col-lg-3 col-form-label" style="font-size: larger; font-family: Georgia, 'Times New Roman', Times, serif;">PHONE NO</label>
+                            <div class="col-lg-8">
+                              <input type="tel" [(ngModel)]="complains.phonenumber" name="phonenumber" class="form-control" placeholder="Enter your phone number">
+                            </div>
+                          </div>
+                          <br>                                         
+                        <div class="d-grid gap-5 mx-auto">                            
+                            <input type="submit" name="submit" value="Submit" class="btn btn-primary"  style="font-size: x-large;">                               
+                          </div>
+                        </form>
+                        </div>
+                     
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer
+<div class="footer">
+    <div class="col-1">
+        <h3> USEFUL LINKS </h3>
+        <a href="#"> About Us </a>
+        <a href="#">Services </a>
+        <a href="#">Contact </a>
+        <a href="#">Blog </a>
+    </div>
+    <div class="col-2">
+        <h3> NEWS LETTER</h3>
+        <div class="form">
+            <input type="email" placeholder="Your email address" required><br>
+            <button type="submit" style="font-size: large;" > SUBSCRIBE NOW </button><br>
+            <br>
+            <p> Copyright 2022 Vizfonica Telecom Pvt. Ltd. All Rights Reserved </p>
+        </div>
+    </div>
+    <div class="col-3">
+        <h3> CONTACT US</h3>
+        <P> NO:125, ANNA AVENUE,<br> OMR ROAD, CHENNAI-600024, TN. 
+            <a href="/">Email id: voizfonica.admin@yahoo.com </a> 
+            <a href="/">Twitter: voizfonica_adminuser2010</a>
+            <a href="/">Ph.No: 044-2435261</a> </P>
+        <br>
+        <a href="/"><p> Privacy Policy</p> </a>
+        <a href="/"><p> Terms and Conditions </p></a>
+
+    </div>
+</div> -->
+</body>
+</html>

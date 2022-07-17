@@ -1,0 +1,72 @@
+<div class="container" style="padding-top: 25px; padding-left:50px ;">
+  <table class="table table-stripped table-bordered">
+    <thead>
+        <tr>
+            <th>Price</th>
+            <th>Validity</th>
+            <th>Description</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr *ngFor="let p of postpaidplans">
+            <td>Rs.{{p.price}}</td>
+            <td>{{p.validity}} Days</td>
+            <td>{{p.description}}</td>
+
+            <td> 
+                <a [routerLink]="['/plans/postpaidplans/chosen',p.id,'view']" class="btn btn-info">Click To Buy</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+    
+    <!-- <div class="card w-90 border-danger mb-3" >
+        <h5 class="card-header">Postpaid Family Plans Rs: 1599</h5>
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bolder;">Validity: Per Month</h5>
+          <p class="card-text">
+            <ul> 
+              <li>3 Free Add-on regular voice connections for family members Unlimited calls (Local + STD + Roaming)</li>
+              <li> 100 SMS/day (Local + STD + Roaming) thereafter 10p/SMS</li>
+              <li> 250 GB monthly data (plus 30GB for each addon) with rollover up to 200 GB (beyond consumption of allocated data, value based charging will be applicable @ 2p/MB)</li>              
+              <li> Voizfonica Thanks Platinum rewards: Netflix Standard monthly subscription, Amazon Prime membership for 6 months at no extra cost, Disney+ Hotstar mobile for 1 year at no extra cost, Handset protection, Lifetime access, and Wynk premium.</li>
+            </ul>
+            <a  class="btn btn-primary" routerLink="/plans/postpaidplans/chosen">Click to buy</a>
+        </div>
+      </div>
+
+      <div class="card w-90 border-danger mb-3" >
+        <h5 class="card-header">Postpaid Family Plans Rs: 1199</h5>
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bolder;">Validity: Per Month</h5>
+          <p class="card-text">
+            <ul> 
+              <li>2 Free Add-on regular voice connections for family members Unlimited calls (Local + STD + Roaming)</li>
+              <li> 100 SMS/day (Local + STD + Roaming) thereafter 10p/SMS</li>
+              <li> 150 GB monthly data (plus 30GB for each addon) with rollover up to 200 GB (beyond consumption of allocated data quota, value based charging will be applicable @ 2p/MB)</li>              
+              <li> Voizfonica Thanks Platinum rewards: Netflix Standard monthly subscription, Amazon Prime membership for 6 months at no extra cost, Disney+ Hotstar mobile for 1 year at no extra cost, Handset protection, Lifetime access, and Wynk premium.</li>
+            </ul>
+            <a  class="btn btn-primary" routerLink="/plans/postpaidplans/chosen">Click to buy</a>
+        </div>
+      </div>
+
+      <div class="card w-90 border-danger mb-3" >
+        <h5 class="card-header">Postpaid Family Plans Rs: 999</h5>
+        <div class="card-body">
+          <h5 class="card-title" style="font-weight: bolder;">Validity: Per Month</h5>
+          <p class="card-text">
+            <ul> 
+              <li>2 Free Add-on regular voice connections for family members Unlimited calls (Local + STD + Roaming)</li>
+              <li> 100 SMS/day (Local + STD + Roaming)</li>
+              <li> 100 GB monthly data (plus 30GB for each addon) with rollover up to 200 GB (beyond consumption of allocated data quota, value based charging will be applicable @ 2p/MB)</li>              
+              <li> Voizfonica Thanks Platinum rewards: Netflix Standard monthly subscription, Amazon Prime membership for 6 months at no extra cost, Disney+ Hotstar mobile for 1 year at no extra cost, Handset protection, Lifetime access, and Wynk premium.</li>
+            </ul>
+            <a  class="btn btn-primary" routerLink="/plans/postpaidplans/chosen">Click to buy</a>
+        </div>
+      </div>   -->
+</div>         
