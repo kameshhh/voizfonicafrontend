@@ -1,4 +1,4 @@
-<body style="background-color: peachpuff; padding-top: 25px;">
+<body style="background-color: peachpuff; padding-top: 25px; height: 90vh;">
 <div class="card-body">
     <p><u> <h2 style="text-align: center; font-size: xx-large; font-family: Georgia, 'Times New Roman', Times, serif;" > VOIZFONICA </h2>
         <h4 style="text-align: center; font-size:x-large; font-family: Georgia, 'Times New Roman', Times, serif; " > Recharge Done </h4>
@@ -11,10 +11,12 @@
             <div class="card-body">
                 <h5 class="card-title" style="font-size: xx-large; font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bolder; color:magenta;">ThankYou!</h5>
               <h5 class="card-title" style="font-size: medium; font-family: Arial, Helvetica, sans-serif;text-align: center; font-weight: bolder; color:magenta;">Payment Bill</h5>
+              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><span style="font-weight:bold;">Email: </span> {{postpaidplans.email}}</p>
+              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><span style="font-weight:bold;">Phone No: </span> {{postpaidplans.phno}}</p>
 
-              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Price : {{postpaidplans.price}}</p>
-              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Validity : {{postpaidplans.validity}}</p>
-              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Description : {{postpaidplans.description}}</p>
+              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><span style="font-weight:bold;">Price: Rs.</span> {{postpaidplans.price}}</p>
+              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><span style="font-weight:bold;">Validity: </span> {{postpaidplans.validity}} Days</p>
+              <p class="card-text" style="padding-left: 45px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><span style="font-weight:bold;">Description: </span> {{postpaidplans.description}}</p>
              
               <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-primary" type="button" style="font-family: 'Times New Roman', Times, serif; text-align: center; font-weight: bolder" routerLink="/plans/postpaidplans">Go Back </button>                

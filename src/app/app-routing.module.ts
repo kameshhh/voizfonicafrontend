@@ -35,6 +35,8 @@ const routes: Routes = [
   {path:'plans/prepaidplans/chosen',component:PaymentComponent},
   {path:'plans/postpaidplans', component: PostpaidplansComponent},
   {path:'plans/postpaidplans/chosen/:pid/view', component:PaymentComponent},
+  {path:'plans/prepaidplans/chosen/:pid/view', component:PaymentComponent},
+  {path:'plans/dongleplans/chosen/:pid/view', component:PaymentComponent},
   {path:'userlanding', component:UserlandingComponent},
   {path:'userlogin/customerlogin/complain', component:ComplainComponent},
   {path:'home', component:CarouselComponent},

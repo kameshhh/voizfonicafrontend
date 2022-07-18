@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { LoginstatusService } from '../loginstatus.service';
+import { DonglePlans } from '../models/donglePlans';
 import { PostpaidPlans } from '../models/postpaidPlans';
+import { PrepaidPlans } from '../models/prepaidPlans';
 import { PlansService } from '../plans.service';
 
 @Component({
@@ -14,6 +16,7 @@ export class PaymentComponent implements OnInit {
   user!:any
 id!:number;
 postpaidplans!:PostpaidPlans;
+prepaidplans!:PrepaidPlans;
 price!:string;
 validity!:string;
 description!:string;
@@ -36,12 +39,56 @@ description!:string;
     this.description=this.route.snapshot.params['pdescription']
     this.plansService.readPostpaidPlanById(this.id).subscribe((data:PostpaidPlans)=>{
       this.postpaidplans=data;
+      console.log(this.postpaidplans)
     })
-    console.log(this.postpaidplans)
+      this.plansService.readPrepaidPlanById(this.id).subscribe((data:PrepaidPlans)=>{
+        this.postpaidplans=data;
+      })
+      this.plansService.readDonglePlanById(this.id).subscribe((data:DonglePlans)=>{
+        this.postpaidplans=data;
+      })
+     
+    // })
+    // console.log(this.postpaidplans)
   }
-
+  
+;
+  
   Payment(){
-    console.log(this.user)
+    this.plansService.readPostpaidPlanById(this.id).subscribe((data:PostpaidPlans)=>{
+      this.postpaidplans=data;
+      this.postpaidplans.email=this.user.email;
+      this.postpaidplans.phno=this.user.phno;
+      console.log(this.postpaidplans)
+      this.plansService.postRecharge(this.postpaidplans).subscribe(data=>{
+        alert('Recharge Successfull')
+      })
+    })
+
+    this.plansService.readPrepaidPlanById(this.id).subscribe((data:PrepaidPlans)=>{
+      this.postpaidplans=data;
+      this.postpaidplans.email=this.user.email;
+      this.postpaidplans.phno=this.user.phno;
+      console.log(this.postpaidplans)
+      this.plansService.postRecharge(this.postpaidplans).subscribe(data=>{
+        alert('Recharge Successfull')
+      })
+    })
+
+    this.plansService.readDonglePlanById(this.id).subscribe((data:DonglePlans)=>{
+      this.postpaidplans=data;
+      this.postpaidplans.email=this.user.email;
+      this.postpaidplans.phno=this.user.phno;
+      console.log(this.postpaidplans)
+      this.plansService.postRecharge(this.postpaidplans).subscribe(data=>{
+        alert('Recharge Successfull')
+      })
+    })
+//     this.plansService.postuser(this.user).subscribe((response) => {
+//       console.log(response);
+//  })
+
+    // console.log(this.user)
     
 }
 

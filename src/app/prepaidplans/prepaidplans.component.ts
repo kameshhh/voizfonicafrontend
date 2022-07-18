@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PrepaidPlans } from '../models/prepaidPlans';
+// import { PostpaidPlans } from '../models/postpaidPlans';
+import { PlansService } from '../plans.service';
 
 @Component({
   selector: 'app-prepaidplans',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrepaidplansComponent implements OnInit {
 
-  constructor() { }
+  prepaidplans:PrepaidPlans[]=[];
 
-  ngOnInit(): void {
+
+  constructor(public plansService:PlansService) { }
+
+    ngOnInit(): void {
+      this.plansService.getAllPrepaidPlans().subscribe((data:PrepaidPlans[])=>{
+        this.prepaidplans=data;
+      })
+    }
   }
 
-}

@@ -20,7 +20,7 @@ export class CustomerformComponent implements OnInit {
     // alert('User Created')
     console.log(this.complains);
     this.servicesService.contactus(this.complains).subscribe(data=>{
-      alert("Complaint Submitted");
+      alert("You will be contacted soon!");
       
     },error=>alert("Complaint not submitted"));
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DonglePlans } from '../models/donglePlans';
+import { PlansService } from '../plans.service';
 
 @Component({
   selector: 'app-dongleplans',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DongleplansComponent implements OnInit {
 
-  constructor() { }
+  dongleplans:DonglePlans[]=[];
+  constructor(public plansService:PlansService) { }
 
   ngOnInit(): void {
+    this.plansService.getAllDonglePlans().subscribe((data:DonglePlans[])=>{
+      this.dongleplans=data;
+    })
   }
-
 }
