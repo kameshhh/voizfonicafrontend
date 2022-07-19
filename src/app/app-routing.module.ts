@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminpageComponent } from './adminpage/adminpage.component';
 import { BilldetailsComponent } from './billdetails/billdetails.component';
 import { DongleplansComponent } from './dongleplans/dongleplans.component';
 import { AboutusComponent } from './Frontend/Components/aboutus/aboutus.component';
@@ -17,6 +18,8 @@ import { SignupComponent } from './signup/signup.component';
 import { UseraccountComponent } from './useraccount/useraccount.component';
 import { UserlandingComponent } from './userlanding/userlanding.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { ViewComponent } from './view/view.component';
+import { ViewrechargehistoryComponent } from './viewrechargehistory/viewrechargehistory.component';
 
 
 const routes: Routes = [
@@ -29,6 +32,9 @@ const routes: Routes = [
   {path:'signup', component:SignupComponent},
   {path:'userlogin', component:UserloginComponent },
   {path:'complain', component:ComplainComponent},
+  {path:'login',component:AdminpageComponent},
+  {path:'userlogin/:pid/view',component:ViewComponent},
+  {path:'userrecharge/:pemail/view',component:ViewrechargehistoryComponent},
   {path:'plans/dongleplans',component:DongleplansComponent},
   {path:'plans/dongleplans/chosen', component:PaymentComponent},
   {path:'plans/prepaidplans', component:PrepaidplansComponent},

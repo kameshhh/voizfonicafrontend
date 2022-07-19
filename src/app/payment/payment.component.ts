@@ -61,7 +61,7 @@ description!:string;
       this.postpaidplans.phno=this.user.phno;
       console.log(this.postpaidplans)
       this.plansService.postRecharge(this.postpaidplans).subscribe(data=>{
-        alert('Recharge Successfull')
+        // alert('Recharge Successfull')
       })
     })
 
@@ -71,7 +71,7 @@ description!:string;
       this.postpaidplans.phno=this.user.phno;
       console.log(this.postpaidplans)
       this.plansService.postRecharge(this.postpaidplans).subscribe(data=>{
-        alert('Recharge Successfull')
+        // alert('Recharge Successfull')
       })
     })
 
@@ -81,7 +81,7 @@ description!:string;
       this.postpaidplans.phno=this.user.phno;
       console.log(this.postpaidplans)
       this.plansService.postRecharge(this.postpaidplans).subscribe(data=>{
-        alert('Recharge Successfull')
+        // alert('Rec.harge Successfull')
       })
     })
 //     this.plansService.postuser(this.user).subscribe((response) => {

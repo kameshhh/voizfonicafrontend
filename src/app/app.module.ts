@@ -24,6 +24,9 @@ import { LandingserviceComponent } from './landingservice/landingservice.compone
 import { RechargedoneComponent } from './rechargedone/rechargedone.component';
 import { UserlandingComponent } from './userlanding/userlanding.component';
 import { BilldetailsComponent } from './billdetails/billdetails.component';
+import { AdminpageComponent } from './adminpage/adminpage.component';
+import { ViewComponent } from './view/view.component';
+import { ViewrechargehistoryComponent } from './viewrechargehistory/viewrechargehistory.component';
 
 
 
@@ -48,7 +51,10 @@ import { BilldetailsComponent } from './billdetails/billdetails.component';
     LandingserviceComponent,
     RechargedoneComponent,
     UserlandingComponent,
-    BilldetailsComponent
+    BilldetailsComponent,
+    AdminpageComponent,
+    ViewComponent,
+    ViewrechargehistoryComponent
     
   ],
   imports: [

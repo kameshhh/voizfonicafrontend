@@ -3,4 +3,6 @@ export interface PaymentHistory{
     price:string;
     validity:string;
     description:string;
+    email:string;
+    phno:string;
 }

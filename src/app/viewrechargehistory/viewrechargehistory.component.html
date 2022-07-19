@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <a routerLink="/login" class="btn btn-warning mb-3 mt-3">Go Back</a>
+
+            <h2 style="text-align: center;">Recharge History</h2>
+            
+            <table class="table table-stripped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Price</th>
+                        <th>Validity</th>
+                        <th>Description</th>
+
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr *ngFor="let p of post">
+                        <td>{{p.id}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.validity}}</td>
+                        <td>{{p.description}}</td>
+                        <td> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Complains } from './models/complains';
 import { NewUser } from './models/newUser';
+import { Post } from './models/post';
 import { User } from './models/user';
 
 @Injectable({
@@ -35,6 +36,19 @@ export class ServicesService {
     return this.httpClient.post("http://localhost:8090/user/contactus",complains);
 
   }
+
+  getAll():Observable<any>{
+    return this.httpClient.get("http://localhost:8090/userdetails/alluserdetails");
+  }
+  readPostById(id:number):Observable<any>{
+   return this.httpClient.get("http://localhost:8090/userdetails/getuserdetails/"+ id);
+ }
+ update(id:number,post:Post):Observable<any>{
+   return this.httpClient.put("http://localhost:8090/userdetails/update/",post);
+ }
+ deleteDetails(id:number){
+   return this.httpClient.delete("http://localhost:8090/userdetails/delete/"+id);
+ }
 
 }
 

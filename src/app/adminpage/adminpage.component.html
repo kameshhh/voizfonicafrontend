@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <a routerLink="/post/create" class="btn btn-warning mt-3 mb-3">User details</a>
+            <table class="table table-stripped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>email</th>
+                        <th>password</th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr *ngFor="let p of posts">
+                        <td>{{p.id}}</td>
+                        <td>{{p.email}}</td>
+                        <td>{{p.password}}</td>
+                        <td> 
+                            <a [routerLink]="['/userlogin/',p.id,'view']" class="btn btn-info mx-2">View</a>
+                            <a [routerLink]="['/userlogin/',p.id,'update']" class="btn btn-primary mx-2">Update</a>
+                            <button type="button" class="btn btn-danger" (click)="deleteDetails(p.id)">Delete</button>
+                            <a [routerLink]="['/userrecharge/',p.email,'view']" class="btn btn-warning mx-2" >View Recharge History</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
